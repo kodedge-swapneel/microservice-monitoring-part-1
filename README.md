@@ -1,6 +1,6 @@
 # Monitoring Microservice using Prometheus and Grafana
 
-## [Click here to watch the video for demonstration.]()
+## [Click here to watch the video for demonstration.](https://youtu.be/6uc3zHywWIw)
 
 In this project, I have demonstrated how to monitor microservice using Prometheus and created dashboard in Grafana to visualize the metrics.
 
@@ -31,7 +31,7 @@ In this project, I have demonstrated how to monitor microservice using Prometheu
 6. Open Grafana using url: `localhost:3000`
 7. Login to Grafana using `username:admin and password:admin`
 8. And to import dashboard, search dashboard here : [grafana/dashboards](https://grafana.com/grafana/dashboards/). For example try with dashboard id: 11378
-9. Also try to create dashboard for custom metrics. For more information, [watch the video](https://docs.docker.com/engine/install/).
+9. Also try to create dashboard for custom metrics. For more information, [watch the video](https://youtu.be/6uc3zHywWIw).
 
 
 ## Sample prometheus query for Histogram metrics:
