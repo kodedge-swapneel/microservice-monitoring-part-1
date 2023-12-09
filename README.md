@@ -2,11 +2,36 @@
 
 ## [Click here to watch the video for demonstration.]()
 
-In this project, I have demonstrated how to monitor microservice using Prometheus and create dashboard in Grafana to visualize the metrics.
+In this project, I have demonstrated how to monitor microservice using Prometheus and created dashboard in Grafana to visualize the metrics.
 
 ### Prerequisites:
  - [Docker](https://docs.docker.com/engine/install/) or [Docker alternative - Colima](https://github.com/abiosoft/colima)
  - IDE and JDK
+
+
+## Perform following steps to run the project:
+
+## To run springboot microservice :
+1. Pull this repository.
+2. Open terminal and then cd into this project repository (i.e. microservice-monitoring-part-1)
+3. Then `cd spring-monitoring-demo`
+4. Build project using command : `./gradlew clean build`
+5. Start docker in your machine
+6. Build the docker image using command : `docker build -t spring-monitoring-demo:latest .`
+7. Run microservice using command : `docker run -p 8080:8080 spring-monitoring-demo`
+8. Verify by calling one of the api from the browser like `http://localhost:8080/visitApi` It should return response as `visitApi called : 1.0`
+9. So here microservice is deployed successfully in the docker.
+
+## To setup Promethues and Grafana:
+1. Open new terminal.
+2. cd into app-monitoring dir. e.g. `cd  microservice-monitoring-part-1/app-monitoring`
+3. Run the command `docker-compose up`
+4. Note that if you get permission issue with /etc dir. Then run command with sudo like this: `sudo docker-compose up`
+5. Now open promethues web UI in browser using `localhost:9090`
+6. Open Grafana using url: `localhost:3000`
+7. Login to Grafana using `username:admin and password:admin`
+8. And to import dashboard, search dashboard here : [grafana/dashboards](https://grafana.com/grafana/dashboards/). For example try with dashboard id: 11378
+9. Also try to create dashboard for custom metrics. For more information, [watch the video](https://docs.docker.com/engine/install/).
 
 
 ## Sample prometheus query for Histogram metrics:
